@@ -1,6 +1,11 @@
 ### Linechart
 
 # from yachtcharter import yachtCharter
+# testo = '-testo'
+# testo = ''
+# something_else = ''
+# chart_key = f"oz-dblogs-{something_else}{testo}"
+
 # template = [
 #     {
 #     "title": f"",
@@ -24,9 +29,16 @@
 
 
 
+
 #### Horizontal bar
 
+
 # from yachtcharter import yachtCharter
+# testo = '-testo'
+# testo = ''
+# something_else = ''
+# chart_key = f"oz-dblogs-{something_else}{testo}"
+
 # template = [
 # 	{
 # 	"title": "Yacht Charter test chart",
@@ -50,6 +62,11 @@
 #### Grouped bar
 
 # from yachtcharter import yachtCharter
+# testo = '-testo'
+# testo = ''
+# something_else = ''
+# chart_key = f"oz-dblogs-{something_else}{testo}"
+
 # template = [
 # 	{
 # 	"title": "Yacht Charter test chart",
@@ -76,6 +93,11 @@
 ### Table
 
 # from yachtcharter import yachtCharter
+# testo = '-testo'
+# testo = ''
+# something_else = ''
+# chart_key = f"oz-dblogs-{something_else}{testo}"
+
 # template = [
 # 	{
 # 	"title": "Yacht Charter test chart",
