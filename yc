@@ -1,0 +1,21 @@
+# from yachtcharter import yachtCharter
+# template = [
+#     {
+#     "title": f"",
+#     "subtitle": f"",
+#     "footnote": "",
+#     "dateFormat": "%Y-%m-%d",
+#     "source": "",
+#     "margin-left": "35",
+#     "margin-top": "30",
+#     "margin-bottom": "20",
+#     "margin-right": "10",
+##     "tooltip":"<strong>{{#formatDate}}{{Date}}{{/formatDate}}</strong><br/> In ICU: {{ICU}}<br/>"
+#     }
+# ]
+
+# yachtCharter(template=template, 
+#             data=final,
+#             chartId=[{"type":"linechart"}],
+#             options=[{"colorScheme":"guardian", "lineLabelling":"TRUE"}],
+#             chartName=f"{chart_key}{testo}")
