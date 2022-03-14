@@ -1,3 +1,5 @@
+### Linechart
+
 # from yachtcharter import yachtCharter
 # template = [
 #     {
@@ -19,3 +21,82 @@
 #             chartId=[{"type":"linechart"}],
 #             options=[{"colorScheme":"guardian", "lineLabelling":"TRUE"}],
 #             chartName=f"{chart_key}{testo}")
+
+
+
+#### Horizontal bar
+
+# from yachtcharter import yachtCharter
+# template = [
+# 	{
+# 	"title": "Yacht Charter test chart",
+# 	"subtitle": "Things",
+# 	"footnote": "Footnote",
+# 	"source": "The universe",
+# 	"margin-left": "20",
+# 	"margin-top": "30",
+# 	"margin-bottom": "20",
+# 	"margin-right": "10"
+# 	}
+# ]
+
+# yachtCharter(template=template, 
+# 			data=final,
+# 			chartId=[{"type":"horizontalbar"}],
+#             options=[{"enableShowMore":"TRUE", "autoSort":"FALSE"}],
+# 			chartName=f"{chart_key}")
+
+
+#### Grouped bar
+
+# from yachtcharter import yachtCharter
+# template = [
+# 	{
+# 	"title": "Yacht Charter test chart",
+# 	"subtitle": "Things",
+# 	"footnote": "Footnote",
+# 	"source": "The universe",
+# 	"margin-left": "60",
+# 	"margin-top": "30",
+# 	"margin-bottom": "20",
+# 	"margin-right": "10"
+# 	}
+# ]
+
+# yachtCharter(template=template, 
+# 			data=final,
+#                 key = [{"key":"Share of population", "colour":"#cc0a11"}, 
+#     {"key":"Share of cases", "colour":"#e6711b"}, 
+#     {"key":"Share of deaths", "colour":"#00456e"}],
+# 			chartId=[{"type":"groupedbar"}],
+#             options=[{"enableShowMore":"FALSE", "autoSort":"FALSE"}],
+# 			chartName=f"{chart_key}")
+
+
+### Table
+
+# from yachtcharter import yachtCharter
+# template = [
+# 	{
+# 	"title": "Yacht Charter test chart",
+# 	"subtitle": "Things",
+# 	"footnote": "Footnote",
+# 	"source": "The universe",
+# 	"margin-left": "20",
+# 	"margin-top": "30",
+# 	"margin-bottom": "20",
+# 	"margin-right": "10"
+# 	}
+# ]
+
+# yachtCharter(template=template, 
+#             options=[{"colorScheme":"guardian","format": "scrolling",
+#             "enableSearch": "TRUE","enableSort": "TRUE"}],
+# 			data=final,
+# 			chartId=[{"type":"table"}],
+# 			chartName=f"{chart_key}")
+
+
+
+
+
