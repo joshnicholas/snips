@@ -3,7 +3,7 @@
 # from yachtcharter import yachtCharter
 # testo = '-testo'
 # testo = ''
-# something_else = ''
+# something_else = 
 # chart_key = f"oz-dblogs-{something_else}{testo}"
 
 # template = [
@@ -36,7 +36,7 @@
 # from yachtcharter import yachtCharter
 # testo = '-testo'
 # testo = ''
-# something_else = ''
+# something_else = 
 # chart_key = f"oz-dblogs-{something_else}{testo}"
 
 # template = [
@@ -64,7 +64,7 @@
 # from yachtcharter import yachtCharter
 # testo = '-testo'
 # testo = ''
-# something_else = ''
+# something_else = 
 # chart_key = f"oz-dblogs-{something_else}{testo}"
 
 # template = [
@@ -95,7 +95,7 @@
 # from yachtcharter import yachtCharter
 # testo = '-testo'
 # testo = ''
-# something_else = ''
+# something_else = 
 # chart_key = f"oz-dblogs-{something_else}{testo}"
 
 # template = [
