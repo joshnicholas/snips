@@ -1,0 +1,20 @@
+### Greater Sydney
+
+greater_sydney = ['Bayside', 'Blacktown', 'Blue Mountains', 'Burwood', 
+'Camden', 'Campbelltown', 'Canada Bay', 'Canterbury-Bankstown', 'Central Coast',
+ 'Cumberland', 'Fairfield', 'Georges River', 'Hawkesbury', 'Hornsby', 'Hunters Hill', 
+ 'Inner West', 'Ku-ring-gai', 'Lane Cove', 'Liverpool', 'Mosman', 'North Sydney', 'Northern Beaches',
+  'Parramatta', 'Penrith', 'Randwick', 'Ryde', 'Strathfield', 'Sutherland Shire',
+   'Sydney', 'The Hills Shire', 'Waverley', 'Willoughby', 'Wollondilly', 'Wollongong', 'Woollahra']
+
+### Metro Melbourne
+
+metro_melbourne = ['Banyule', 'Bayside', 'Boroondara', 'Brimbank', 'Cardinia', 
+'Casey', 'Darebin', 'Frankston', 'Glen Eira', 'Greater Dandenong', 'Hobsons Bay',
+'Hume', 'Kingston', 'Knox', 'Manningham', 'Maribyrnong', 'Maroondah', 'Melbourne', 
+'Melton', 'Monash', 'Moonee Valley', 'Moreland', 'Mornington Peninsula', 'Nillumbik', 
+'Port Phillip', 'Stonnington', 'Whitehorse', 'Whittlesea', 'Wyndham', 'Yarra', 'Yarra Ranges']
+
+### Greater Brisbane
+
+greater_brisbane = ['Brisbane', 'Ipswich', 'Logan', 'Moreton Bay', 'Redlands']
