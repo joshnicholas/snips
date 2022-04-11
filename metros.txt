@@ -18,3 +18,16 @@ metro_melbourne = ['Banyule', 'Bayside', 'Boroondara', 'Brimbank', 'Cardinia',
 ### Greater Brisbane
 
 greater_brisbane = ['Brisbane', 'Ipswich', 'Logan', 'Moreton Bay', 'Redlands']
+
+### Greater Perth
+
+greater_perth = ['Bayswater', 'Belmont', 'Canning', 'Fremantle', 'Melville', 'Nedlands',
+'Perth', 'South Perth', 'Stirling', 'Subiaco', 'Vincent', 'Peppermint Grove',
+'Bassendean', 'Cambridge', 'Claremont', 'Cottesloe', 'East Fremantle', 'Mosman Park', 'Victoria Park']
+
+#### Greater Adelaide
+
+greater_adelade = ['Adelaide Hills', 'Adelaide', 'Burnside', 'Campbelltown', 
+'Charles Sturt', 'Gawler', 'Holdfast Bay', 'Marion', 'Mitcham', 'Norwood', 'Onkaparinga',
+'Playford', 'Port Adelaide Enfield', 'Prospect', 'Salisbury', 'Tea Tree Gully',
+'Unley', 'Walkerville', 'West Torrens']
