@@ -1,0 +1,17 @@
+### Populations
+# source: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release
+
+pops = {
+    "NSW": 8186.8 *1000,
+    "VIC": 6643.1 * 1000,
+    "QLD": 5240.5 * 1000,
+    "SA": 1772.8 * 1000,
+    "WA": 2685.2 * 1000,
+    "TAS": 540.8 * 1000,
+    "NT": 245.9 * 1000,
+    "ACT": 430.5 * 1000,
+    "AUS": 25750.2 * 1000,
+}
+
+pop_df = pd.DataFrame.from_records([pops]).T.reset_index()
+pop_df.columns = ['CODE', 'Populations']
