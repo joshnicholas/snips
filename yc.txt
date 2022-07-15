@@ -29,7 +29,7 @@
 
 
 
-
+_____________________________________________
 #### Horizontal bar
 
 
@@ -90,6 +90,7 @@
 # 			chartName=f"{chart_key}")
 
 
+_____________________________________________
 ### Table
 
 # from yachtcharter import yachtCharter
@@ -119,6 +120,78 @@
 # 			chartName=f"{chart_key}")
 
 
+bye = bars
+bye.fillna('', inplace=True)
+
+# bye['Color'] = '#7d0068'
+final = bye.to_dict(orient='records') 
+template = [
+	{
+	"title": "Australia's quarterly emissions by source",
+	"subtitle": "Based on the latest National Greenhouse Gas Inventory release",
+	"footnote": "",
+	"source": "Department of Industry, Science, Energy and Resources",
+    "dateFormat": "%Y-%m-%d",
+    "xAxisDateFormat": "%Y",
+	"margin-left": "60",
+	"margin-top": "30",
+	"margin-bottom": "20",
+	"margin-right": "10",
+    "minY": '-30',
+    "tooltip":"{{groupValue}} <strong>Mt CO2-e</strong>"
+	}
+]
+
+from modules.yachtCharter import yachtCharter
+testo = "-testo"
+# testo = ''
+chart_key = f"oz-datablogs-climate-data-page-emissions-trend-targets-bar{testo}"
+yachtCharter(template=template, 
+			data=final,
+            key = [],
+            # key = [],
+            trendline = trends,
+            options=[{"colorScheme":"guardian", 'trendColors': '#94b1ca,#a9af2b,#a9af2b,#a9af2b'}],
+            # options=[{"colorScheme":"guardian", 'trendColors': "#a9af2b,#b82266,#ff9b0b,#197caa"}],
+            chartId=[{"type":"stackedbar"}],
+			chartName=f"{chart_key}")
 
 
+_____________________________________________
+#### Stackedbar
+
+# bye = bars
+# bye.fillna('', inplace=True)
+
+# final = bye.to_dict(orient='records') 
+# template = [
+# 	{
+# 	"title": "",
+# 	"subtitle": "",
+# 	"footnote": "",
+# 	"source": "",
+#     "dateFormat": "%Y-%m-%d",
+#     "xAxisDateFormat": "%b %Y",
+# 	"margin-left": "60",
+# 	"margin-top": "30",
+# 	"margin-bottom": "20",
+# 	"margin-right": "10",
+#     "minY": '-30',
+#     "tooltip":"<strong> Mt CO2-e</strong>: {{groupValue}} "
+# 	}
+# ]
+
+# from modules.yachtCharter import yachtCharter
+# testo = "-testo"
+# # testo = ''
+# chart_key = f"oz-datablogs-something-something-{somethingo}-{testo}"
+# yachtCharter(template=template, 
+# 			data=final,
+#             key = [],
+#             # key = [],
+#             # trendline = trends,
+#             # options=[{"colorScheme":"guardian", 'trendColors': '#94b1ca,#a9af2b,#a9af2b,#a9af2b'}],
+#             options=[{"colorScheme":"guardian"],
+#             chartId=[{"type":"stackedbar"}],
+# 			chartName=f"{chart_key}")
 
