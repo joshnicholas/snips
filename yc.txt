@@ -160,7 +160,7 @@ yachtCharter(template=template,
 _____________________________________________
 #### Stackedbar
 
-# bye = bars
+# bye = 
 # bye.fillna('', inplace=True)
 
 # final = bye.to_dict(orient='records') 
