@@ -1,0 +1,30 @@
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
+def fuzzy_merge(df_1, df_2, key1, key2, threshold=90, limit=1):
+    s = df_2[key2].tolist()
+    m = df_1[key1].apply(lambda x: process.extract(x, s, limit=limit))
+    df_1['matches'] = m
+    m2 = df_1['matches'].apply(lambda x: ', '.join([i[0] for i in x if i[1] >= threshold]))
+    df_1['matches'] = m2
+
+    return df_1
+    
+    
+    --------------------------
+    
+    
+from fuzzywuzzy import process
+
+def fuzzy_list(first_list, second_list, threshold=80, limit=5):
+    dicto = {}
+
+    for word in first_list:
+
+        result = process.extract(word, second_list, limit=limit)
+        result = [x for x in result if x[1] >= threshold]    
+
+        if len(result) > 0:
+            result = result[0]
+            dicto[word] = result[0]
+    print(dicto)
