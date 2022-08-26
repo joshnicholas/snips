@@ -27,4 +27,4 @@ def fuzzy_list(first_list, second_list, threshold=80, limit=5):
         if len(result) > 0:
             result = result[0]
             dicto[word] = result[0]
-    print(dicto)
+    return dicto 
