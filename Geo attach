@@ -1,0 +1,41 @@
+
+
+import shapely.geometry
+import fiona
+
+
+def attacher(frame, shapes, latName, longName, placeName, geoName, outPath, outName):
+  print("Hi")
+  listo = []
+  inter = frame.copy()
+  sas = fiona.open(shapes)
+
+  print(sas)
+
+  for index,row in inter.iterrows():
+    lat = row[latName]
+    long = row[longName]
+    place = row[placeName]
+
+    pointer = shapely.geometry.Point(long, lat)
+
+    for sa in sas:
+      if sa['geometry']:
+        # print(sa['geometry'])
+        shaper = shapely.geometry.shape(sa['geometry'])
+
+        if shaper.contains(pointer):
+          found = sa['properties'][geoName]
+
+          row[geoName] = found
+          
+          listo.append(row)
+
+          cat = pd.concat(listo, axis=1).T
+
+          cat.drop_duplicates(subset=[placeName, geoName], inplace=True)
+
+          with open(f"{outPath}/{outName}.csv", 'w') as f:
+            cat.to_csv(f, index=False, header=True)
+
+          print("Saved: ", len(cat))
