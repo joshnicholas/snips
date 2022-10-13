@@ -1,0 +1,26 @@
+# %%
+import os 
+import pandas as pd 
+
+path = 'input/nsw_stations_map/'
+
+# %%
+
+def combine_from_folder(pathos):
+  
+  listo = []
+  
+  fillos = os.listdir(pathos)
+  fillos = [pathos + x for x in fillos if x != '.DS_Store']
+
+  for fillo in fillos:
+    inter = pd.read_csv(fillo)
+
+    listo.append(inter)
+
+  cat = pd.concat(listo)
+
+  return cat
+
+
+df = combine_from_folder(path)
