@@ -1,0 +1,22 @@
+
+# %%
+
+
+def grab_and_save_sheet(pathos, outty, nammo):
+  inter = pd.read_csv(pathos)
+
+  with open(f'{outty}/{nammo}.csv', 'w') as f:
+    inter.to_csv(f, index=False, header=True)
+
+  p = inter
+
+  print(p)
+  print(p.columns.tolist())
+
+  return inter 
+
+df = grab_and_save_sheet("https://docs.google.com/spreadsheets/d/e/2PACX-1vRO6jWS8LI8X3ut5T3E4mbhZS8CL7UeOp1qY4hhm5k-6LZaYXOk-yRUJv6YsTgbQ-OnneW8SZHQ_pjC/pub?gid=0&single=true&output=csv", 
+'/Users/josh_nicholas/github/oz-flood-warnings-scrape/new_vic_river_map/input', 'rivers_to_use')
+
+
+# %%
