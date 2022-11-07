@@ -1,17 +1,24 @@
 ### Populations
-# source: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release
+# source: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/mar-2022
 
-pops = {
-    "NSW": 8186.8 *1000,
-    "VIC": 6643.1 * 1000,
-    "QLD": 5240.5 * 1000,
-    "SA": 1772.8 * 1000,
-    "WA": 2685.2 * 1000,
-    "TAS": 540.8 * 1000,
-    "NT": 245.9 * 1000,
-    "ACT": 430.5 * 1000,
-    "AUS": 25750.2 * 1000,
-}
+pops = pd.read_csv('input/Australian Bureau of Statistics.csv')
+# 'Unnamed: 0', "Population at 31 Mar 2022\xa0('000)", 
+# "Change over previous year ('000)", 'Change over previous year (%)'
+pops = pops[['Unnamed: 0', "Population at 31 Mar 2022\xa0('000)"]]
+pops.rename(columns={'Unnamed: 0': "Jurisdction", "Population at 31 Mar 2022\xa0('000)": "Population"}, inplace=True)
+pops.dropna(subset=['Population'], inplace=True)
 
-pop_df = pd.DataFrame.from_records([pops]).T.reset_index()
-pop_df.columns = ['CODE', 'Populations']
+pops['Jurisdction'] = pops['Jurisdction'].str.replace("(a)", '', regex=False).str.strip()
+pops['Population'] = pops['Population'] * 1000
+
+pops = dict(zip(pops.Jurisdction, pops.Population))
+
+pops = {'New South Wales': 8130100.0, 
+'Victoria': 6593300.0, 
+'Queensland': 5296100.0, 
+'South Australia': 1815500.0, 
+'Western Australia': 2773400.0, 
+'Tasmania': 571200.0, 
+'Northern Territory': 250400.0, 
+'Australian Capital Territory': 455900.0, 
+'Australia': 25890800.0}
