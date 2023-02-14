@@ -31,3 +31,9 @@ bris_ordinal = bris_now.toordinal()
 utc_month = datetime.date.strftime(utc_yest, '%m')
 utc_year = datetime.date.strftime(utc_yest, '%Y')
 utc_day = datetime.date.strftime(utc_yest, '%d')
+
+
+today = datetime.datetime.now().astimezone(pytz.timezone("Australia/Brisbane"))
+
+today_os_format = today.strftime('%Y%m%d')
+today_use_date = today.strftime('%Y/%m/%d')
