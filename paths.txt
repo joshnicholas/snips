@@ -1,0 +1,22 @@
+
+# %%
+
+import pathlib
+
+pathos = pathlib.Path(__file__).parent
+out_path = f"{pathos}/data/projects_raw"
+
+# %%
+
+def make_if_not_there(pather, fillo):
+
+    fillos = os.listdir(pather)
+
+    if fillo not in fillos:
+        os.mkdir(f"{pather}/{fillo}")
+
+
+make_if_not_there('data/projects_raw', 'test')
+
+
+# %%
