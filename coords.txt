@@ -15,6 +15,9 @@ zoomScale	centreLat	centreLon
 zoomScale	centreLat	centreLon
 5	-37.5	145.8
 
+
+#### Greater capital city areas:
+
 Sydney
   "zoomScale": "85",
   "centreLat": "-33.75",
