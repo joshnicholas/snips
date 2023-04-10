@@ -15,4 +15,43 @@ zoomScale	centreLat	centreLon
 zoomScale	centreLat	centreLon
 5	-37.5	145.8
 
+Sydney
+  "zoomScale": "85",
+  "centreLat": "-33.75",
+  "centreLon": "151.2"
 
+Melbourne
+  "zoomScale": "86",
+  "centreLat": "-37.84",
+  "centreLon": "144.9"
+
+Canberra
+  "zoomScale": "70",
+  "centreLat": "-35.3",
+  "centreLon": "149.1"
+
+Brisbane
+  "zoomScale": "53",
+  "centreLat": "-27.4",
+  "centreLon": "153.1"
+
+Adelaide
+  "zoomScale": "95",
+  "centreLat": "-34.92",
+  "centreLon": "138.6"
+
+Darwin
+  "zoomScale": "90",
+  "centreLat": "-12.45",
+  "centreLon": "130.8"
+
+Perth
+  "zoomScale": "70",
+  "centreLat": "-31.9",
+  "centreLon": "115.8"
+
+
+Hobart
+  "zoomScale": "70",
+  "centreLat": "-42.9",
+  "centreLon": "147.25"
