@@ -37,7 +37,7 @@ def upload_map_data(jsonObject,filename,path='docsdata'):
 
   print("JSON is updated")
   print("data", "https://interactive.guim.co.uk/{path}/{filename}.json".format(path=path, filename=filename))
-
+  print("chart: ", f'https://interactive.guim.co.uk/embed/iframeable/2019/03/choropleth_map_maker_v6/html/index.html?key={filename}')
 
 datah = 
 boundary = "https://interactive.guim.co.uk/gis/world-110m.json"
