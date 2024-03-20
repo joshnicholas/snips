@@ -1,0 +1,34 @@
+### LIST VERSION
+
+var tableau = []
+
+var className = '.HOSPITALISED'
+
+var contexto = document.querySelectorAll(`${className} tr`).forEach((row, f) => {
+    var rowdata = []
+    row.querySelectorAll("th, td").forEach((cell, b) => {
+        rowdata.push(cell.innerText)
+    })
+    tableau.push(rowdata)
+})
+console.log(tableau)
+copy(tableau)
+
+
+#### CSV/STRING VERSION
+
+
+var tableau = ''
+
+var className = '.HOSPITALISED'
+
+var contexto = document.querySelectorAll(`${className} tr`).forEach((row, f) => {
+    var rowdata = ""
+    row.querySelectorAll("th, td").forEach((cell, b) => {
+        rowdata += `${cell.innerText},`
+    })
+    tableau += `${rowdata}\n`
+})
+
+console.log(tableau)
+copy(tableau)
