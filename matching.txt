@@ -1,3 +1,6 @@
+# !pip install llama_index
+# !pip install pip install llama-index-embeddings-huggingface
+
 def ai_matcher(first_list, second_list):
     # # Adapted from: https://blog.gopenai.com/fuzzy-string-matching-with-llama-index-662a6c803944
 
