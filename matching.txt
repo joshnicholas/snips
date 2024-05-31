@@ -33,7 +33,27 @@ def fuzzy_merge(df_1, df_2, key1, key2, threshold=90, limit=1):
     return df_1
     
     
-    --------------------------
+__________________________________
+
+
+def fuzzy_merge_lists(list_1, list_2, threshold=90):
+    from fuzzywuzzy import fuzz
+    from fuzzywuzzy import process
+
+    matches = {}
+
+    for stringo in list_1:
+        extracted = process.extract(stringo, list_2, limit=1)[0]
+
+        if int(extracted[1]) > threshold:
+            matches[stringo] = extracted[0]
+        else: 
+            matches[stringo] = ''
+
+    return matches
+
+
+__________________________________
     
     
 from fuzzywuzzy import process
