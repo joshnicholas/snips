@@ -1,0 +1,48 @@
+    function relax(dicto) {
+    var spacing = 3;
+    var dy = 2;
+    let dataKeys = Object.keys(dicto)
+    let dataValues = Object.values(dicto)
+    dataValues.sort().reverse()
+
+    let alreadyDone = []
+
+    console.log("dataValues start: ", dataValues)
+    
+    dataValues.forEach(function(num, index) {
+      let newArray = [...dataValues]
+
+        if (index > 0){
+          let initNum = newArray.slice(index)[0]
+
+          console.log("initNum: ", initNum)
+
+          let isIt = alreadyDone.some((x) => Math.abs(x - initNum) < spacing)
+          console.log("isIt: ", isIt) 
+
+          if (isIt){
+            let interno = alreadyDone.filter(d => Math.abs(d - initNum) < spacing)
+            let newNum = d3.min(interno) - dy 
+            console.log('newNum: ', newNum)
+
+            dicto[getKeyByValue(endo, num)] = newNum
+            let arrayIndex = dataValues.indexOf(initNum)
+            dataValues[arrayIndex] = newNum
+            alreadyDone.push(newNum)
+            console.log("newArray: ", newArray)
+
+          }
+
+            alreadyDone.push(num)
+
+        } else {
+          alreadyDone.push(num)
+        }
+
+
+    })
+    
+
+    console.log("dataValues end: ", dataValues)
+    return dicto 
+    }
