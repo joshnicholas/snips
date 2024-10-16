@@ -1,3 +1,36 @@
+# modified from this https://sbert.net/examples/applications/semantic-search/README.html
+from sentence_transformers import SentenceTransformer
+import torch
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+def sim_matcher(outpath, stemmo, list_one, list_two, kay=5, cutoff = 0.95):
+    corpus = model.encode(list_two)
+
+    records = []
+
+    for string in list_one:
+        embedding = model.encode(string, convert_to_tensor=False)
+        similarity_scores = model.similarity(embedding, corpus)[0]
+        scores, indices = torch.topk(similarity_scores, k=kay)
+
+        record = {"String": string}
+        counter = 1
+        for score, idx in zip(scores, indices):
+            if score > cutoff:
+                record[f'Match {counter}'] = list_two[idx]
+                record[f'Match {counter} score'] = float(score)
+                counter +=1
+        records.append(record)
+    
+        cat = pd.DataFrame.from_records(records)
+        # print(cat)
+
+        dumper(outpath,stemmo, cat )
+
+    return cat
+
+__________________________________
+
 # !pip install llama_index
 # !pip install pip install llama-index-embeddings-huggingface
 
