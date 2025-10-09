@@ -32,4 +32,8 @@ def build_correspondence(big, little, big_id_col, little_id_col, big_stem, littl
     out = inter_agg.rename(columns={little_id_col: little_stem, big_id_col: big_stem})[
         [little_stem, big_stem, f"share_of_{little_stem}"]
     ]
+
+    out[little_stem] = out[little_stem].astype(str)
+    out[big_stem] = out[big_stem].astype(str)
+
     out.to_csv(out_path, index=False)
