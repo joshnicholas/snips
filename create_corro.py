@@ -1,6 +1,5 @@
 def build_correspondence(big, little, big_id_col, little_id_col, big_stem, little_stem, out_path, area_crs="EPSG:3577"):
     import geopandas as gpd
-    import pandas as pd
     from shapely import make_valid
 
     big = big[[big_id_col, "geometry"]].copy()
@@ -23,11 +22,6 @@ def build_correspondence(big, little, big_id_col, little_id_col, big_stem, littl
         how="intersection",
     )
 
-    if inter.empty:
-        out = pd.DataFrame(columns=[little_stem, big_stem, f"share_of_{little_stem}"])
-        out.to_csv(out_path, index=False)
-        return out
-
     inter["int_area_m2"] = inter.area
     inter = inter[inter["int_area_m2"] > 0]
 
@@ -39,4 +33,3 @@ def build_correspondence(big, little, big_id_col, little_id_col, big_stem, littl
         [little_stem, big_stem, f"share_of_{little_stem}"]
     ]
     out.to_csv(out_path, index=False)
-    return out
