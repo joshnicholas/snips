@@ -7,37 +7,7 @@ let width = clientWidth - margin.right - margin.left
 // let height = $derived(width * 0.6)
 let height = $derived(clientWidth)
 
-    let colourDict = {
-'Australian Labor Party': '#cc2b12', 
-'Labor': '#cc2b12', 
-    'Coalition': '#005689', 
-    'Australian Greens': '#00b700',
-        'Greens': '#00b700', 
-    'Legalise Cannabis Victoria': '#59a14f', 
-        'Legalise Cannabis': '#59a14f', 
-    'Labour DLP': '#fdbb84', 
-    'Liberal Democrats': '#76b7b2', 
-    'Shooters, Fishers & Farmers Vic': '#af7aa1', 
-        'Shooters': '#af7aa1', 
-    "One Nation": '#edc949', 
-    "Pauline Hanson's One Nation": '#ccc', 
-        "Others": '#ccc', 
-    'Family First Victoria': '#ccc', 
-    "Derryn Hinch's Justice Party": '#ccc', 
-    'Animal Justice Party': '#ff9da7', 
-        'Animal Justice': '#ff9da7', 
-    'Victorian Socialists': '#ccc', 
-    "Fiona Patten's Reason Party": '#ccc', 
-    'Freedom Party of Victoria': '#ccc', 
-    'United Australia Party': '#ccc', 
-    'Sack Dan Andrews Restore Democracy': '#ccc', 
-    'Health Australia Party': '#ccc', 
-    'Sustainable Australia Party': '#ccc', 
-    'Companions and Pets Party': '#ccc', 
-    'Angry Victorians Party': '#ccc', 
-    'Transport Matters': '#ccc', 
-    'New Democrats': '#ccc', 
-    'Independent': '#ccc'}
+    let colourDict = {}
 
 
   const xScale = d3.scaleBand()
