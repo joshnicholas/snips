@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Guardian Sport Section",
+  "version": "1.0",
+  "description": "Hides the sport section on theguardian.com",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.theguardian.com/*",
+        "http://www.theguardian.com/*"
+      ],
+      "css": ["content.css"]
+    }
+  ]
+}
